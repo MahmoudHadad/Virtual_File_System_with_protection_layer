@@ -1,0 +1,33 @@
+CreateFile root/test.txt 20
+CreateFolder root/folder1
+CreateFolder root/folder2
+CreateFolder root/folder3
+CreateFolder root/folder1/newfolder
+DisplayDiskStructure
+TellUser
+CreateUser u1 123
+CreateUser u1 123
+CreateUser u2 123
+deleteUser u1
+CreateUser u1 123
+grant u1 root/folder1 11
+grant u1 root/folder2 1
+grant u3 root/folder1 10
+grant u1 root/folder2 10
+grant u2 root/folder3 01
+show_all
+login u1 1
+login u3 123
+login u1 123
+TellUser
+CreateFile root/folder1/newfolder/file.txt 20
+CreateFile root/folder3/file.txt 20
+CreateFolder root/folder1/newfolder/u1folder 
+DeleteFolder root/folder1
+DeleteFolder root/folder2
+login u2 123
+CreateFile root/folder3/file.txt 20
+CreateFolder root/folder3/u2folder
+DeleteFolder root/folder3 
+logout
+TellUser
